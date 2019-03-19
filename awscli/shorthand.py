@@ -76,7 +76,7 @@ class ShorthandParseError(Exception):
             num_spaces = self.index - last_newline - 1
         if '\n' in self.value[self.index:]:
             # If there's newline in the remaining, divide value
-            # into consumed and remainig
+            # into consumed and remaining
             # foo==bar,\n
             #     ^
             # bar=baz
@@ -136,7 +136,7 @@ class ShorthandParser(object):
             parser.parse('a=b')  # {'a': 'b'}
             parser.parse('a=b,c')  # {'a': ['b', 'c']}
 
-        :tpye value: str
+        :type value: str
         :param value: Any value that needs to be parsed.
 
         :return: Parsed value, which will be a dictionary.
